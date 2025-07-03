@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Utsav Singh | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        :root {
+            --primary-color: #4caf50;
+            --bg-light: rgba(255, 255, 255, 0.9);
+            --bg-dark: rgba(34, 34, 34, 0.9);
+            --text-light: #f5f5f5;
+            --text-dark: #222;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("profile.jpg") no-repeat center center fixed;
+            background-size: cover;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        body.light {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        body.dark {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.8);
+            transition: background 0.3s;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f0f0f0;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.9);
+            margin: 30px auto;
+            padding: 30px;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.4s, color 0.4s;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        body.dark section {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        #about img {
+            width: 180px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            display: block;
+            margin: 0 auto 20px;
+            transition: transform 0.4s;
+        }
+
+        #about img:hover {
+            transform: scale(1.05);
+        }
+
+        #projects .project {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        #projects .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        #gallery img {
+            width: calc(33.33% - 10px);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        #gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #333;
+            color: white;
+        }
+
+        .chatbot-button,
+        .voice-button,
+        .theme-toggle {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle {
+            bottom: 160px;
+        }
+
+        .voice-button {
+            bottom: 120px;
+        }
+
+        .chatbot-button:hover,
+        .voice-button:hover,
+        .theme-toggle:hover {
+            background-color: #388e3c;
+        }
+
+        @media (max-width: 768px) {
+            #gallery img {
+                width: calc(50% - 10px); /* Two images per row on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            #gallery img {
+                width: calc(100% - 10px); /* One image per row on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body class="light">
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <img src="profile.jpg" alt="Utsav Singh">
+        <h2>About Me</h2>
+        <p>I’m <strong>Utsav Singh</strong>, a B.Tech CSE student at NIET, passionate about technology, design, and entrepreneurship.</p>
+        <p>Founder of <strong>Convergence</strong>, focused on bridging creativity, tech, and hands-on learning.</p>
+        <p>Exploring AI, business growth, and global strategies to redefine education.</p>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project" onclick="openModal('project1')">
+            <h3>Project 1</h3>
+            <p>A brief description of Project 1, highlighting key features and technologies used.</p>
+        </div>
+        <div class="project" onclick="openModal('project2')">
+            <h3>Project 2</h3>
+            <p>A brief description of Project 2, focusing on your contribution and outcome.</p>
+        </div>
+        <div class="project" onclick="openModal('project3')">
+            <h3>Project 3</h3>
+            <p>A brief description of Project 3 with details of the skills applied.</p>
+        </div>
+        <p>More projects will be added soon!</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Image Gallery</h2>
+        <img src="project1.jpg" alt="Project 1" onclick="openImage('project1.jpg')">
+        <img src="project2.jpg" alt="Project 2" onclick="openImage('project2.jpg')">
+        <img src="project3.jpg" alt="Project 3" onclick="openImage('project3.jpg')">
+        <img src="project4.jpg" alt="Project 4" onclick="openImage('project4.jpg')">
+        <img src="project5.jpg" alt="Project 5" onclick="openImage('project5.jpg')">
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:singhutsav555@gmail.com">singhutsav555@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/utsav-singh-a0ba37345" target="_blank">LinkedIn Profile</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/uvii_thakur555/" target="_blank">@uvii_thakur555</a></p>
+        <p>GitHub: <a href="https://github.com/UVII555" target="_blank">UVII555</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Utsav Singh. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Projects -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img class="modal-image" id="modalImage" style="width: 100%">
+    </div>
+
+    <!-- Feature Buttons -->
+    <button class="chatbot-button" onclick="alert('Chatbot coming soon!')">💬 Ask Me</button>
+    <button class="voice-button" onclick="startListening()">🎤 Voice</button>
+    <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+
+    <!-- JS for Voice Commands, Theme Toggle, and Modals -->
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark');
+            document.body.classList.toggle('light');
+        }
+
+        function startListening() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert("Sorry, your browser doesn't support voice recognition.");
+                return;
+            }
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'en-US';
+            recognition.onresult = function (event) {
+                const command = event.results[0][0].transcript.toLowerCase();
+                if (command.includes('about')) document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+                else if (command.includes('project')) document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                else if (command.includes('contact')) document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                else alert("Sorry, didn't catch that. Try saying 'Go to about', 'Go to projects', etc.");
+            };
+            recognition.start();
+        }
+
+        // Modal for Projects
+        function openModal(project) {
+            const modal = document.getElementById("projectModal");
+            const title = document.getElementById("modalTitle");
+            const description = document.getElementById("modalDescription");
+
+            if (project === 'project1') {
+                title.innerText = "Project 1";
+                description.innerText = "Detailed description of Project 1.";
+            } else if (project === 'project2') {
+                title.innerText = "Project 2";
+                description.innerText = "Detailed description of Project 2.";
+            } else if (project === 'project3') {
+                title.innerText = "Project 3";
+                description.innerText = "Detailed description of Project 3.";
+            }
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("projectModal");
+            modal.style.display = "none";
+        }
+
+        // Image Modal
+        function openImage(src) {
+            const imageModal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modalImage.src = src;
+            imageModal.style.display = "block";
+        }
+
+        function closeImage() {
+            const imageModal = document.getElementById("imageModal");
+            imageModal.style.display = "none";
+        }
+
+        // Close modal when clicked outside of the modal content
+        window.onclick = function (event) {
+            const projectModal = document.getElementById("projectModal");
+            const imageModal = document.getElementById("imageModal");
+            if (event.target === projectModal) {
+                projectModal.style.display = "none";
+            }
+            if (event.target === imageModal) {
+                imageModal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
