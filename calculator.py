@@ -14,7 +14,7 @@ def button_click(value):
     current_expression = entry.get()
     entry.delete(0, tk.END)
     entry.insert(0, current_expression + value)
-
+    
 # Function to clear the entry
 def clear_entry():
     entry.delete(0, tk.END)

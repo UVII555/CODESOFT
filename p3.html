@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Utsav Singh | Portfolio </title>
+    <title>Utsav Singh | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -38,6 +40,7 @@
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
 
         nav ul li {
@@ -77,7 +80,28 @@
 
         h2 {
             border-bottom: 2px solid #4caf50;
+            text-align: center;
+            color: #4caf50;
             padding-bottom: 10px;
+        }
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;  /* Adjust as needed */
+            height: 150px; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make circular */
+            object-fit: cover; /* Cover without distortion */
+            border: 3px solid #4caf50; /* Border to match the theme */
         }
 
         .project {
@@ -160,7 +184,7 @@
             border-radius: 10px;
             background: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            display: none;  /* Initially hidden */
+            display: none; /* Initially hidden */
             z-index: 1000;
         }
 
@@ -264,9 +288,11 @@
         </nav>
     </header>
 
-
     <section id="about">
         <h2>About Me</h2>
+        <div class="about-container">
+            <img src="profile copy.jpg" alt="Utsav Singh" class="profile-pic">
+            <div class="about-text">
         <p>I’m <strong>Utsav Singh</strong>, a B.Tech CSE student at NIET, passionate about technology, design, and entrepreneurship.</p>
         <p>Founder of <strong>Convergence</strong>, focused on bridging creativity, tech, and hands-on learning.</p>
         <p>Exploring AI, business growth, and global strategies to redefine education.</p>
@@ -276,7 +302,12 @@
         <h2>My Projects</h2>
         <div class="project">
             <h3>Project 1</h3>
-            <p>A brief description of Project 1, highlighting key features and technologies used.</p>
+            <h4> **Calculator Application**</h4>
+            <p> <li>- Developed a GUI-based calculator using Python's Tkinter library.</li>
+                <li>- Implemented basic arithmetic operations and error handling for invalid inputs.</li>
+                <li>- Utilized NumPy for advanced mathematical calculations.</li>
+                <li>- Designed a user-friendly interface that allows for seamless interaction.</li>
+                <li>- Technologies Used: Python, Tkinter, NumPy.</li>
         </div>
         <div class="project">
             <h3>Project 2</h3>
@@ -290,7 +321,7 @@
 
     <section id="gallery">
         <h2>Image Gallery</h2>
-        <img src="project1.jpg" alt="Project 1" onclick="openImage('project1.jpg')">
+        <img src="Project1.jpg" alt="Project 1" onclick="openImage('Project1.jpg')">
         <img src="project2.jpg" alt="Project 2" onclick="openImage('project2.jpg')">
         <img src="project3.jpg" alt="Project 3" onclick="openImage('project3.jpg')">
     </section>
@@ -302,9 +333,11 @@
         <p>Instagram: <a href="https://www.instagram.com/uvii_thakur555/" target="_blank">@uvii_thakur555</a></p>
         <p>GitHub: <a href="https://github.com/UVII555" target="_blank">UVII555</a></p>
     </section>
-    <section id="resune">
+
+    <section id="resume">
         <h2>Resume</h2>
         <p>Download my resume.</p>
+        <a href="path/to/your/resume.pdf" target="_blank">Download Resume</a>
     </section>
 
     <footer>
@@ -365,6 +398,10 @@
                     window.location.hash = '#projects';
                 } else if (command.includes('contact')) {
                     window.location.hash = '#contact';
+                } else if (command.includes('gallery')) {
+                    window.location.hash = '#gallery';
+                } else if (command.includes('resume')) {
+                    window.location.hash = '#resume';
                 } else {
                     alert("Sorry, didn't catch that. Try saying 'Go to about', 'Go to projects', etc.");
                 }
