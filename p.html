@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTSAV SINGH</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            // You can perform form validation here if needed
+            // Redirecting to thank you page
+            window.location.href = "thank_you.html";
+        }
+    </script>
+    <style>
+    /* Inline CSS for quick styling */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #0D0D0D; /* Dark background */
+        color: white;
+    }
+    
+    .header {
+        background: #1A1A1A; /* Slightly lighter than the background */
+        padding: 20px 0;
+    }
+    
+    .container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-size: 2em;
+        color: #4CAF50; /* Green */
+    }
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+        color: #4CAF50; /* Highlight on hover */
+    }
+    
+    .cta-button {
+        background: #4CAF50; /* Green */
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .hero {
+        text-align: center;
+        padding: 100px 20px;
+    }
+    
+    .hero-title {
+        font-size: 2.5em;
+        color: #4CAF50; /* Green */
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5em;
+        margin: 20px 0;
+    }
+    
+    .about, .portfolio, .testimonials, .footer {
+        padding: 40px;
+        background: #1A1A1A; /* Consistent background for sections */
+        margin: 20px 0;
+    }
+    
+    h2 {
+        color: #4CAF50; /* Green for section titles */
+        margin-bottom: 20px;
+        align-self: start;
+    }
+    
+    .portfolio-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .portfolio-item {
+        background: #2A2A2A; /* Background for portfolio items */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        flex: 1 1 calc(45% - 20px); /* Responsive items */
+    }
+    
+    .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+    
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+    }
+    
+    footer form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    footer input, footer textarea {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    footer button {
+        background: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    footer button:hover {
+        background: #388E3C; /* Darker shade on hover */
+    }
+</style>    
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">UTSAV SINGH</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">Contact Me</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2 class="hero-title">CREATIVITY IS MORE IMPORTANT THAN KNOWLEDGE</h2>
+        <p class="hero-subtitle">Together we achieve more than any single person could ever do alone.</p>
+        <a href="#portfolio" class="cta-button">GET STARTED</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>I’m <strong>Utsav Singh</strong>, a B.Tech CSE student at NIET, passionate about technology, design, and entrepreneurship.</p>
+        <p>Founder of <strong>Convergence</strong>, focused on bridging creativity, tech, and hands-on learning.</p>
+        <p>Exploring AI, business growth, and global strategies to redefine education.</p>
+    </section>
+
+    <section id="portfolio landing page" class="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-items">
+            <!-- Example Project -->
+            <div class="portfolio-item">
+                <img src="images/project1.jpg" alt="Project Title 1">
+                <h3>Project Title 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project Title 2">
+                <h3>Project Title 2</h3>
+                <p>Description of Project 2.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Testimonials</h2>
+        <p>"Great work!" - Doreamon</p>
+        <p>"Impressed with the quality!" - Shinchan</p>
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2>Contact Me</h2>
+        <p>Email: singhutsav555@gmail.com</p>
+        <form action="send_mail.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
